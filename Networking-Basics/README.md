@@ -1,6 +1,6 @@
 # Networking Basics Lab
 
-##Goal
+## Goal
 Practice basic Linux networking commands (`ifconfig`, `ping`, `traceroute`) and document results to build hands-on experience.
 
 ---
@@ -40,14 +40,14 @@ ping -c 4 google.com
 
 ---
 
-##What I learned
+## What I learned
 - ifconfig shows both local (private) and loopback (127.0.0.1) addresses.
 - 'ping' confirmed I had internet access and gave me latency numbers (17–29ms).
 - 'traceroute' revealed the first hop (my VM’s gateway) but later hops didn’t respond — which is normal since many routers block traceroute packets.
 
 ---
 
-##Why it Matters in Cybersecurity
+## Why it Matters in Cybersecurity
 - SOC Analysts use ping to test network connectivity quickly.
 - Network engineers use ifconfig (or ip addr) to troubleshoot IP issues.
 - Traceroute helps identify where network traffic is being blocked — useful in detecting firewalls, misconfigured routers, or even attacks
