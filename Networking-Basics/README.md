@@ -1,4 +1,4 @@
-#Networking Basics Lab
+# Networking Basics Lab
 
 ##Goal
 Practice basic Linux networking commands (`ifconfig`, `ping`, `traceroute`) and document results to build hands-on experience.
@@ -12,7 +12,7 @@ Practice basic Linux networking commands (`ifconfig`, `ping`, `traceroute`) and 
 - **Why it matters:** Helps identify your machine's IP address and check connectivity setup.
 
 **Screenshot:**
-![ifconfiq output](ifconfig_output.png)
+![ifconfig output](ifconfig_output.png)
 
 ---
 
@@ -23,9 +23,11 @@ Practice basic Linux networking commands (`ifconfig`, `ping`, `traceroute`) and 
 **Example I ran:**
 ```bash
 ping -c 4 google.com
+```
+
 
 **Screenshot:**
-![ping count](ping_4_count.png)
+![ping 4 count](ping_4_count.png)
 
 ---
 
@@ -34,18 +36,18 @@ ping -c 4 google.com
 - **Why it matters:** Useful for troubleshooting — tells you where in the network path a slowdown or block is happening.
 
 **Screenshot:**
-![traceroute outpute](traceroute_output.png)
+![traceroute output](traceroute_output.png)
 
 ---
 
 ##What I learned
-- `ifconfig` shows both local (private) and loopback (127.0.0.1) addresses.
+- ifconfig shows both local (private) and loopback (127.0.0.1) addresses.
 - 'ping' confirmed I had internet access and gave me latency numbers (17–29ms).
 - 'traceroute' revealed the first hop (my VM’s gateway) but later hops didn’t respond — which is normal since many routers block traceroute packets.
 
 ---
 
 ##Why it Matters in Cybersecurity
-- SOC Analysts use ping to quickly test network connectivity.
+- SOC Analysts use ping to test network connectivity quickly.
 - Network engineers use ifconfig (or ip addr) to troubleshoot IP issues.
 - Traceroute helps identify where network traffic is being blocked — useful in detecting firewalls, misconfigured routers, or even attacks
