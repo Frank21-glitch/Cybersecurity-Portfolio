@@ -18,7 +18,7 @@ Practice basic Linux networking commands (`ifconfig`, `ping`, `traceroute`) and 
 
 ### 2. `ping`
 - **What it does:** Sends small packets to a server (like Google) and checks if they come back.
-- **Why it matters:** Used to measure internet connectivty and measure response time (latency).
+- **Why it matters:** Used to measure internet connectivity and measure response time (latency).
 
 **Example I ran:**
 ```bash
@@ -41,9 +41,9 @@ ping -c 4 google.com
 ---
 
 ## What I learned
-- ifconfig shows both local (private) and loopback (127.0.0.1) addresses.
-- 'ping' confirmed I had internet access and gave me latency numbers (17–29ms).
-- 'traceroute' revealed the first hop (my VM’s gateway) but later hops didn’t respond — which is normal since many routers block traceroute packets.
+- `ifconfig` shows both local (private) and loopback (127.0.0.1) addresses.
+- `ping` confirmed I had internet access and gave me latency numbers (17–29ms).
+- `traceroute` revealed the first hop (my VM’s gateway) but later hops didn’t respond — which is normal since many routers block traceroute packets.
 
 ---
 
