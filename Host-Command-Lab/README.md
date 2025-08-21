@@ -15,7 +15,7 @@ Understand how the `host` command is used to query DNS records and identify the 
 - **Why it matters in security:** Attackers/defenders often resolve domains to IPs to map targets, block malicious servers, or check for DNS poisoning.
 
 **Screenshot:**
-![host google.com](host_output.png)
+![host google.com](host.png)
 
 ---
 
