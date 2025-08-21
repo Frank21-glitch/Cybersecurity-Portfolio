@@ -29,7 +29,7 @@ Understand how the `host` command is used to query DNS records and identify the 
   - Knowing MX records shows where a company handles its mail traffic.
 
 **Screenshot:**
-![host mx](host_MX)
+![host mx](host_MX.png)
 
 ---
 
