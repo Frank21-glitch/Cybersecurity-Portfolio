@@ -341,11 +341,11 @@
 
 ### Concentrato / head-end
 - Encryption/decryption access device
-- Often intergrated into a firewall
+- Often integrated into a firewall
 
 ### Many deployment options
 - Specialized cryptographic hardware
-- software-based options availbale
+- software-based options available
 
 ### Often used with client software
 - Sometimes built into the OS
@@ -559,7 +559,7 @@
 
 ### On-demand software
 - No local installation
-- Why manage your own email distribution? or payroll?
+- Why manage your own email distribution or payroll?
 
 ### Central management of data and application
 - Your data is out there
@@ -587,9 +587,9 @@
 # Platform as a Service (PaaS)
 
 ### No servers, no software, no maintenance team, no HVAC
-- someone else handles the platform, you handle the development
+- Someone else handles the platform, you handle the development
 
-### You don't have direct contrrol of the data, people, or infrastructure
+### You don't have direct control of the data, people, or infrastructure
 - Trained security professionals are watching your stuff
 - Choose carefully
 
@@ -598,5 +598,130 @@
 - SalesForce.com
 
 ---
+
+# Introduction to IP  8/23/25
+
+## A series of moving vans
+
+### Efficiently move a large amount of data
+- Analogy: Moving a truck to get data from one house to another
+
+### The network topology is the road
+- Ethernet, DSL, cable system
+
+### The truck is the Internet Protocol (IP)
+- We've designed the roads for this truck
+
+### The boxes hold your data
+- Boxes of TCP and UDP
+
+### Inside the boxes are more things
+- Application information
+
+---
+
+# TCP and UDP
+
+### Transported inside of IP
+- Encapsulated by the IP protocol
+
+### Two ways to move data from place to place
+- Different features for different applications
+
+### OSI Layer 4
+- The transport layer
+
+### Multiplexing
+- Use many different applications at the same time
+- TCP and UDP
+
+---
+
+# TCP - Transmission Control Protocol
+
+### Connection-oriented
+- A formal connection setup and close
+
+### "Reliable" Delivery
+- Recovery from errors
+- can manage out-of-order messages or retransmission
+
+### Flow control
+- The receiver can manage how much data is sent
+
+---
+
+# UDP - User Datagram Protocol
+
+### Connectionless
+- No formal open or close to the connection
+
+### "Unreliable" delivery
+- No error recovery
+- No reordering of data or retransmission
+
+### No flow control
+- The sender determines the amount of data transmitted
+
+---
+
+# Speed Delivery
+
+### The IP delivery truck delivers from one (IP) address to another (IP) address
+- Every house has an address, every computer has an IP address
+
+### Boxes arrive at the house / IP address
+- Where do the boxes go
+- Each box has a room name
+
+### Port is written on the outside of the box
+- Drop the box into the right room
+
+---
+
+# Lots of ports
+
+### IPv4 sockets
+- Server IP address, protocol, server application port number
+- Client IP address, protocol, client port number
+
+### Non-ephemeral ports permanent port numbers
+- Ports 0 through 1,023
+- Usually on a server or service
+
+### Epherman ports - temporary port numbers
+- Ports 1,024 through 65,535
+
+---
+
+# Port numbers
+
+- TCP and UDP ports can be any number between 0 and 65,535
+
+### Most servers (services) use non-ephemeral (not temporary) port numbers
+- This isn't always the case
+- it's just a number
+
+### Port numbers are for communication, not security
+
+### Service port number needs to be "well-known"
+
+### TCP port numbers aren't the same as UDP port numbers
+
+---
+
+# Ports on the network
+
+### Web server - tcp/80
+
+### VoIP server - udp/5004
+
+### Email server - tcp/143
+
+---
+
+
+
+
 
 
