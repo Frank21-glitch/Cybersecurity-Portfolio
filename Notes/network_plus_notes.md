@@ -720,6 +720,254 @@
 
 ---
 
+# Common Ports 8/24/25
+
+# FTP - File Transfer Protocol
+
+### Transfers file between systems
+- Generic file transfer method
+- Not specific to an operating system
+
+### tcp/20 (active mode data), tcp/21 (control)
+- Authenticates with a username and password
+
+### Full features functionality
+- List, add, delete, etc
+
+---
+
+# SSH - Secure Shell
+
+- Text-based console communication
+- Encrypted communication line - tcp/22
+
+---
+
+# SFTP - Secure FTP
+
+### Generic file transfer with security
+- Encrypted network communication
+
+### Uses the SSH file transfer Protocol
+- tcp/22
+
+### Provides system functionality
+- Resuming interrupted transfers. directory listings. remote file removal
+
+### Uses SSH (port 22)
+- SSH isn't just for console communication
+
+---
+
+# Telnet
+
+### Telnet - Telecommunication Network
+- tcp/23
+
+### Console access
+- similar functionality to SSH
+
+### in clear communication
+- not the best choice for production systems
+
+---
+
+# SMTP - Simple Mail Transfer Protocol
+- Server to server email transfers
+- tcp/25 (SMTP using plaintext)
+- tcp/587 (SMTP using TLD encryption
+
+### Also used to send mail from a device to a mail server
+- Commonly configured on mobile devices and email clients
+
+### Other protocols are used for clients to receive email
+- IMAP, POP3
+
+---
+
+# DNS - Domain Name System
+
+### Converts names to IP Addresses - udp/53
+- www.professormesser.com = 162.159.246.164
+
+### These are very critical resources
+- Usually, multiple DNS servers are in production
+
+---
+
+# DHCP - Dynamic Host Configuration Protocol
+
+### Automated configuration of IP address, subnet mask and other options
+- udp/67, udp/68
+- Requires a DHCP server
+- Server, appliance, integrated into a SOHO router, etc
+
+### Dynamic / pooled
+- IP addresses are assigned in real time from a pool
+- Each system is given a lease, which must be renewed at set intervals
+
+### DHCP reservation
+- Addresses are assigned by MAC address in DHCP Server
+- Quickly manage addresses from one location
+
+---
+
+# TFTP - Trivial File Transfer Protocol
+
+### TFTP - Trivial File Transfer Protocol
+- udp/69
+
+### Very Simple file transfer application
+- Read files and write files
+
+### No authentication
+- not used highly secure systems
+
+### Useful when starting a system
+- transfer configuration files
+- quick and easy
+
+---
+
+# HTTP and HTTPS
+
+### Hypertext Transfer Protocol
+- Communication in the browser
+- and by other applications
+
+### In the clear or encrypted
+- SSL (Secure Sockets Layer) or TLS (Transport Layer Security)
+
+---
+
+# NTP - Network Time Protocol
+
+### Switches, routers, firewalls, servers, workstations
+- Every device has its own clock
+- udp/123
+
+### Synchronizing the clocks becomes critical
+- Log files, authentication information, outage details
+
+### Automatic updates
+- No flashing 12:00 lights
+
+### Flexible - you control how clocks are updated
+
+### Very Accurate
+- Accuracy is better than 1 millisecond on a local network
+
+---
+
+# SNMP - Simple Network Management Protocol
+
+### Gather statistics from network devices
+- udp/161
+
+### v1 - the original
+- Structures tables
+- in the clear
+
+### v2 - a good step ahead
+- data type enhancements
+- bulk transfers
+- still in the clear
+
+### v3 - a secure standard
+- Message integrity
+- authentication
+- encryption
+
+### SNMP trap
+- Alerts and notifications from the network devices
+- udp/162
+
+---
+
+# LDAP / LDAPS
+
+### LDAP (Lightweight Directory Access Protocol)
+- tcp/389
+- Store and retrieve information in a network directory
+
+### LDAPS (LDAPS Secure)
+- A non-standard implementation of LDAP over SSL
+- tcp/636
+
+---
+
+# SMB - Server Message Block
+
+### Protocol used by Microsoft Windows
+- File sharing, printer sharing
+- also called CIFS (Common Internet File System)
+
+### Integrated into the operating system
+- Access rights integration across the systems
+- file sharing publishing
+- file locking
+
+### Direct over tcp/445 (NetBIO-less
+- direct SMB communication over TCP
+
+---
+
+# Syslog
+
+### Standard for message logging
+- Diverse systems, consolidated log
+- udp/514
+  
+### Usually, a central log collector
+- integrated into the SIEM
+- Security information and event manager
+
+### You're going to need a lot of disk space 
+- no more, more than that
+- data storage from many devices over an extended time frame
+
+--- 
+
+# Databases
+
+### Collection of information
+- many different types of data
+- one common method to store and query
+
+### Structured Query Language (SQL)
+- A standard language across database servers
+
+### Microsoft SWL Server
+- MS-SQL (Microsoft Structured Query Language)
+- tcp/1433
+
+---
+
+# RDP - Remote Desktop Protocol
+
+### Share a desktop from a remote location over tcp/3389
+- Connect to an entire desktop or just an application
+
+### Remote Desktop Services on many Windows versions
+- Clients for Windows, MACOS, Linux, Unix, iPhone, and others
+
+---
+
+# SIP - Session Initiation Protocol
+
+### Voice over IP (VoIP) Signaling
+- tcp/5060 and tcp/5061
+
+### Setup and manage VoIP sessions
+- call, ring, play busy signals, hang up
+
+### Extend voice communication
+- Video conferencing
+- Instant messaging
+- file transfer
+- etc
+
+---
 
 
 
