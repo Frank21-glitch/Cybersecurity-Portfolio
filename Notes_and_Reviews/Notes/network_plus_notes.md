@@ -195,3 +195,94 @@
 - report on access points use
 - usually a proprietary system
   - wireless controller is paired with the access point 
+
+---
+
+### Networking Functions
+- A lot of is happening behind the scenes
+  - many networking functions are part of the infrastructure
+- May need to get data from our network to a network thats in another part of the world
+- may need Access to a system that's located somewhere else and provide support
+- traffic management = prioritize the important application
+- Make sure our system are up and available
+
+### Content Delivery Network (CDN)
+- Designed to get data from one central point to an end user
+- Set up in geographical areas
+  - north americans use the north american CDN -> Much faster than going out to the centralized server that moght be located somewhere far
+- We are all using a CDN
+  - Large and small sites use this to distribute their data to users
+  - making sure it's accessible and efficient
+
+---
+
+### Virtual Private Network (VPN)
+- Allows connection to a remote network, while sending all the data encrypted
+  - secure way to send data even accross networks, that is insecure for examle the public internet
+- VPN uses a device called a concentrator / head-end
+  - central connection point for all the users who are using the VPN
+  - designed for high speed encryption and decryption of network data
+  - can be a standalone device but commonly intergated with a next generation firewall
+- Many Deploment options
+  - Specialized cryptographic hardware
+  - software based options availbale
+- might use a specialized OS
+  - sometimes built into the OS
+
+---
+
+### Quality of Service (QoS)
+- also referred to as traffic shaping and packet shaping
+- allows admin to control what types of app flow through the network based on bandwidth usage or data rates
+- sets an important application to have higher priorities than other apps
+- to control this QoS
+  - Routers, switches, firewalls, QoS devices
+ 
+---
+
+### Time to Live (TTL)
+- How long should data be available?
+  - not all systems or protocols are self-regulating
+  - Sometimes we have to tell the system to stop
+- Creating a timer
+  - based on the time of day or number of iterations a task has completed
+  - we could then stop it or drop
+- Many uses
+  - drop a packet caught in a loop
+  - clear a cache
+
+---
+
+### Routin loops
+- Router A thinks the next hop is Router B
+- router B thinks the next hop is router A
+  - and repeat
+- easy to misconfigure
+  - especially with static routing
+- This can't go on forever
+  - TTL is used to dtop the loop
+ 
+---
+
+### IP (Internet Protocol)
+- Loops could cause a packet to live forever
+  - drop the packet after certain number of hops
+- Each pass through a router is a hop
+  - Default TTL for macOS/Linux is 64 hops
+  - Default TTL for Windows is 128
+- router decreases TTL by 1
+  - a TTL of zero is dropped by the router
+
+---
+
+### DNS (Domain Name System)
+- TTL is associated with the total number of seconds
+- DNS lookup
+  - Resolve an IP address from a full qualified domain name
+  - google.com = 192.178.218.138
+- inside of the DNS resolution is info of TTL
+  - tell us how long we should cache this local entry
+  - how long? TTL seconds
+- Included with the configuration of a DNS server
+  - For Google, it say 134
+- TTL is used in many other protocols
