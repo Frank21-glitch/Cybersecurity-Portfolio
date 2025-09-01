@@ -286,3 +286,133 @@
 - Included with the configuration of a DNS server
   - For Google, it say 134
 - TTL is used in many other protocols
+
+---
+
+### Designing the Cloud
+- on demand computing power, with a click of a button
+- able to scale up and scale down these application, which provides us **Elasticty**
+- Application we can scale up or down
+  - we can access them from anywhere
+- multitenancy = customers using the same cloud infrastructure
+
+---
+
+### Virtual Network
+- server farm with 100 individual computers
+  - big farm\
+- all server are connected with enterprise switches and routers
+  - with redundancy
+- migrate 100 physical server to one physical server
+  - 100 redundancy servers
+- What happens to the network?
+
+---
+
+### Network Function Virtualization (NFV)
+- Replace physical network devices with virtual versions
+- same function as physical device
+  - routing, switching, load  balancing, firewalls, etc
+- quickly and easily deploy network functions
+  - VM, containers, fault tolerance, etc
+
+---
+
+### Connecting to the Cloud
+- **Virtual Private Cloud (VPC)**
+  - a pool of resources created in a public cloud
+- Common to create VPCs
+  - many different application clouds
+- Connect VPCs with transit gateway
+  - and user to VPCs
+  - a "cloud router"
+- make it secure
+  - VPCs are commonly on different IP subnets
+  - connecting to the cloud is often through a VPN
+
+- **VPN (Virtual Private Network)
+  - site-to-site VPN through the Internet
+- Virtual Private Cloud Gateway / internet gateway
+  - connects users on the internet
+- VPC NAT gateway
+  - Network Address Translation (NAT)
+  - private cloud subnets connect to external resources
+  - external resources cannot access the private cloud
+- VPC Endpoint
+  - Direct connection between cloud provider networks
+
+---
+
+### Security groups and lists
+- a firewall that's created for your cloud based services
+  - control inbound and outbound traffic flows
+- Layer 4 port number
+  - TCP or UDP port
+- Layer 3 address
+  - individual addresses
+  - CIDR block notation
+  - IPv4 or IPv6
+ 
+  ---
+
+  ### Network Security List
+  - assign a security rule to an entire IP subnet
+    - applies to all devices in the subnet
+  - very broad
+    - can become hard to manage
+    - not all devices in a subnet have the same security posture
+  - dont a lotprovide de granularity
+    - broad rules may not provide the right level of security
+
+  ---
+
+  ### Network security group
+  - assign rules to individual Virtual Network Interface Card (VNIC)
+    - applies to specific devices and network connections
+  - More granularity that we can bring down to the individual interfaces
+    - increases the amount of administration required to manage the list
+
+---
+
+### Cloud Deployment Models
+- Public cloud
+  - Available to everyone over the internet
+- Private cloud
+  - your own virtualize local data center
+- Hybrid cloud
+  - a mix of both
+ 
+---
+
+### Software as a Service (SaaS)
+- on demand software
+  - no local installation
+  - why manage your own email distrubution?
+- Central management of data and application
+  - your data is out there
+- A complete application offering
+  - no devolpment work to use
+  - example, gmail. office 365
+
+---
+
+### Infrastructure as a Service (IaaS)
+- sometimes called Hardware as a Service (HaaS)
+  - hardware in the cloud and using your own software on top of that
+- you are resposible for the management and all the data associated with software
+- your data is out there, but more within your control
+- web server providers
+
+---
+
+### Platform as a Service (PaaS)
+- still in the cloud but you're the one who manages the development efforts, to customize the application to your specifications
+- cloud provider gives you all the tool to build the app
+- cloud give you blocks -> you build it
+- The underlying engine is responsible for the service provider
+- your responsibilty is to build and maintain the app
+- example, salesforce.com
+
+---
+
+### 
