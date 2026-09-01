@@ -75,60 +75,71 @@ The first version of the lab will contain the following systems:
 
 ## Planned Lab Architecture
 
-```text
-Windows 11 Host
- Ubuntu Server
- Linux administration
- SSH
-Logging
- Security monitoring
-
-Windows Client
-poweshell
-Event logging
-Endpoint security
+Windows 11 Host  
+├── Ubuntu Server  
+│   ├── Linux administration  
+│   ├── SSH  
+│   ├── Logging  
+│   └── Security monitoring  
+│  
+└── Windows Client  
+    ├── PowerShell  
+    ├── Event logging  
+    └── Endpoint security  
 
 The environment will expand later to include:
 
-Windows Server
-Active Directory
-SIEM monitoring
-Additional security systems
-Project Methodology
+- Windows Server
+- Active Directory
+- SIEM monitoring
+- Additional security systems
+
+---
+
+## Project Methodology
 
 Each lab will follow this process:
 
-Build → Configure → Test → Troubleshoot → Fix → Document
+**Build → Configure → Test → Troubleshoot → Fix → Document**
 
 The goal is to understand not only how to configure systems, but also how to investigate and resolve real-world problems.
 
-Current Progress
- Configure virtualization platform
- Deploy Ubuntu Server
- Verify Ubuntu networking
- Configure SSH
- Verify remote SSH access from Windows
- Deploy Windows client
- Configure isolated virtual network
- Test Windows-to-Linux communication
- Create first troubleshooting scenario
- Capture and analyze traffic with Wireshark
- Add security monitoring
-Labs
-Lab 01 — Ubuntu Server Deployment and Network Validation
+---
+
+## Current Progress
+
+- [x] Configure virtualization platform
+- [x] Deploy Ubuntu Server
+- [x] Verify Ubuntu networking
+- [x] Configure SSH
+- [x] Verify remote SSH access from Windows
+- [ ] Deploy Windows client
+- [ ] Configure isolated virtual network
+- [ ] Test Windows-to-Linux communication
+- [ ] Create first troubleshooting scenario
+- [ ] Capture and analyze traffic with Wireshark
+- [ ] Add security monitoring
+
+---
+
+## Labs
+
+### Lab 01 — Ubuntu Server Deployment and Network Validation
 
 Completed:
 
-Deployed Ubuntu Server in VirtualBox
-Verified hostname and interface configuration
-Verified DHCP addressing and default routing
-Confirmed internet connectivity
-Confirmed DNS resolution
-Verified SSH service availability
-Connected remotely from Windows PowerShell
+- Deployed Ubuntu Server in VirtualBox
+- Verified hostname and interface configuration
+- Verified DHCP addressing and default routing
+- Confirmed internet connectivity
+- Confirmed DNS resolution
+- Verified SSH service availability
+- Connected remotely from Windows PowerShell
 
-View Lab 01
+[View Lab 01](./labs/lab-01-ubuntu-server-deployment.md)
 
-Ethics
+---
+
+## Ethics
 
 All cybersecurity testing documented in this project is performed only on systems I own, intentionally vulnerable systems, or environments where I have explicit authorization to test.
