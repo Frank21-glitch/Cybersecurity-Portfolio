@@ -128,10 +128,10 @@ Planned topics:
 
 # Education
 
-**Wakefield High School Diploma**
+- **Wakefield High School Diploma**
 
 
-**A.A.S. in Cybersecurity - In Progress**
+- **A.A.S. in Cybersecurity - In Progress**
 
 ---
 
