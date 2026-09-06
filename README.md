@@ -59,7 +59,7 @@ A virtualized home lab designed to simulate real-world IT and cybersecurity trou
 
 ### Next Lab
 
-- **Lab 04 - Linux Users, Groups, and Permissions Troubleshooting**
+- **Lab 06 - Windows Server Deployment**
 
 [View Cybersecurity Home Lab](./01-Cybersecurity-Home-Lab/)
 
@@ -127,6 +127,9 @@ Planned topics:
 ---
 
 # Education
+
+**Wakefield High School Diploma**
+
 
 **A.A.S. in Cybersecurity - In Progress**
 
