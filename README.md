@@ -34,108 +34,80 @@ My goal with this portfolio is to go beyond coursework and document practical la
 
 A virtualized home lab designed to simulate real-world IT and cybersecurity troubleshooting scenarios.
 
-### Completed Labs
+## Completed Labs
 
-- **Lab 01 - Ubuntu Server Deployment and Network Validation**
-  - Deployed Ubuntu Server in VirtualBox
-  - Verified IP addressing and routing
-  - Tested internet connectivity and DNS
-  - Configured and verified SSH
-  - Connected remotely from Windows PowerShell
+### Lab 01 — Ubuntu Server Deployment and Network Validation
 
-- **Lab 02 - DNS Troubleshooting**
-  - Simulated a DNS configuration failure
-  - Verified that IP connectivity still worked
-  - Identified DNS as the root cause
-  - Restored DNS configuration
-  - Verified successful name resolution
+I deployed an Ubuntu Server VM in VirtualBox and worked through the basic server setup.
 
-- **Lab 03 - SSH Firewall Troubleshooting**
-  - Simulated an SSH outage using UFW
-  - Verified that SSH remained active
-  - Confirmed TCP port 22 was listening
-  - Identified the firewall as the root cause
-  - Restored remote SSH connectivity
+I verified the hostname, IP addressing, routing, internet connectivity, DNS resolution, and SSH. I also connected to the server remotely from Windows PowerShell.
 
-## Lab 01 — Ubuntu Server Deployment
-
-I deployed my first Ubuntu Server VM and worked through the basic setup.
-
-I verified the hostname, IP address, routing, internet access, DNS, and SSH.
-
-I also tested logging into the server remotely from Windows.
-
-[View Lab 01](./labs/lab-01-ubuntu-server-deployment.md)
+[View Lab 01](./01-Cybersecurity-Home-Lab/labs/lab-01-ubuntu-server-deployment.md)
 
 ---
 
-## Lab 02 — DNS Troubleshooting
+### Lab 02 — DNS Troubleshooting
 
-In this lab, I intentionally broke DNS on the Ubuntu server while keeping the network connection working.
+I intentionally broke DNS on the Ubuntu server while keeping normal IP connectivity working.
 
-This helped me understand the difference between having network connectivity and actually being able to resolve domain names.
+This helped me understand the difference between basic network connectivity and name resolution. I identified DNS as the problem, restored the correct configuration, and verified that domain names resolved again.
 
-I used tools like `ping` and `resolvectl` to find the problem and restore DNS.
-
-[View Lab 02](./labs/lab-02-dns-troubleshooting.md)
+[View Lab 02](./01-Cybersecurity-Home-Lab/labs/lab-02-dns-troubleshooting.md)
 
 ---
 
-## Lab 03 — SSH and Firewall Troubleshooting
+### Lab 03 — SSH Firewall Troubleshooting
 
-I created an SSH connection problem by changing firewall rules on the Ubuntu server.
+I created an SSH outage by changing UFW firewall rules on the Ubuntu server.
 
-I checked whether SSH was running, verified the listening port, inspected the firewall, found the cause of the connection failure, and restored access.
+I verified that the SSH service was still running and that TCP port 22 was listening, then traced the connection failure back to the firewall rule and restored remote SSH access.
 
-[View Lab 03](./labs/lab-03-ssh-firewall-troubleshooting.md)
+[View Lab 03](./01-Cybersecurity-Home-Lab/labs/lab-03-ssh-firewall-troubleshooting.md)
 
 ---
 
-## Lab 04 — Linux Users, Groups, and Permissions
+### Lab 04 — Linux Users, Groups, and Permissions
 
 I created a protected directory and used Linux users, groups, ownership, and permissions to control access.
 
-I then removed a user from the required group to create a real `Permission denied` problem.
+I then removed a user from the required security group to create a real `Permission denied` problem. I investigated the issue, identified the missing group membership, and restored access.
 
-I investigated the issue and restored the correct group membership.
-
-[View Lab 04](./labs/lab-04-linux-permissions-troubleshooting.md)
+[View Lab 04](./01-Cybersecurity-Home-Lab/labs/lab-04-linux-permissions-troubleshooting.md)
 
 ---
 
-## Lab 05 — Windows 11 Client Deployment
+### Lab 05 — Windows 11 Client Deployment
 
-I deployed a Windows 11 Pro VM and started learning Windows administration through PowerShell.
+I deployed a Windows 11 Pro VM and started building a Windows administration baseline using PowerShell.
 
 I worked with:
 
-- Local users
-- Local groups
+- Local users and groups
 - Administrator membership
 - Windows services
 - Microsoft Defender
-- Processes
+- Running processes
 - TCP connections
 - Windows Event Logs
 - Networking and DNS
 
-[View Lab 05](./labs/lab-05-windows-client-deployment.md)
+[View Lab 05](./01-Cybersecurity-Home-Lab/labs/lab-05-windows-client-deployment.md)
 
 ---
 
-## Lab 06 — Windows Server 2025 Deployment
+### Lab 06 — Windows Server 2025 Deployment
 
-I deployed Windows Server 2025 and configured it as `DC01`.
+I deployed Windows Server 2025 and configured the server as `DC01`.
 
-Before installing Active Directory, I learned how to use Server Manager and PowerShell to inspect the server, networking, services, connections, and event logs.
+Before turning it into a Domain Controller, I used Server Manager and PowerShell to inspect the server, verify networking, review services and connections, and establish a Windows Server baseline.
 
-[View Lab 06](./labs/lab-06-windows-server-deployment.md)
+[View Lab 06](./01-Cybersecurity-Home-Lab/labs/lab-06-windows-server-deployment.md)
 
 ---
 
-## Lab 07 — Active Directory Domain Deployment
+### Lab 07 — Active Directory Domain Deployment
 
-This was the point where the lab started becoming a real Windows domain environment.
+This was where the lab started becoming a full Windows domain environment.
 
 I configured `DC01` with a static IP address and installed:
 
@@ -143,73 +115,71 @@ I configured `DC01` with a static IP address and installed:
 - DNS Server
 - Group Policy Management
 
-I then promoted `DC01` to a Domain Controller and created my first Active Directory forest:
+I then promoted `DC01` to a Domain Controller and created the Active Directory forest:
 
 `franklab.test`
 
-I verified the domain with PowerShell, Active Directory Users and Computers, and DNS Manager.
+I verified the domain using PowerShell, Active Directory Users and Computers, and DNS Manager.
 
-[View Lab 07](./labs/lab-07-active-directory-domain-deployment.md)
+[View Lab 07](./01-Cybersecurity-Home-Lab/labs/lab-07-active-directory-domain-deployment.md)
 
 ---
 
-## Lab 08 — Active Directory Users, Groups, and OUs
+### Lab 08 — Active Directory Users, Groups, and OUs
 
 I started organizing the domain like a small company.
 
-I created departments for:
+I created Organizational Units for:
 
 - IT
 - HR
 - Sales
 
-I created domain accounts:
+I created domain users:
 
 - `it.user`
 - `hr.user`
 - `sales.user`
 
-I also created security groups:
+I also created Global Security Groups:
 
 - `GG-IT`
 - `GG-HR`
 - `GG-Sales`
 
-Each user was placed into the correct department and security group.
+Each user was placed into the correct department and security group. I verified the setup using both Active Directory Users and Computers and PowerShell.
 
-I verified everything using both Active Directory Users and Computers and PowerShell.
-
-[View Lab 08](./labs/lab-08-active-directory-users-groups-ous.md)
+[View Lab 08](./01-Cybersecurity-Home-Lab/labs/lab-08-active-directory-users-groups-ous.md)
 
 ---
 
-## Lab 09 — Windows 11 Domain Join and Authentication
+### Lab 09 — Windows 11 Domain Join and Authentication
 
-In this lab, I connected `WIN11-CLIENT01` to the `franklab.test` domain.
+I connected `WIN11-CLIENT01` to the `franklab.test` Active Directory domain.
 
-I configured the client with:
+The client was configured with:
 
 - Static IP: `192.168.50.20`
 - DNS Server: `192.168.50.10`
 
-Before joining the domain, I verified that the client could communicate with `DC01` and locate the Active Directory DNS and LDAP records.
+Before joining the domain, I verified that the client could reach `DC01`, resolve the domain through DNS, and locate the Active Directory LDAP service records.
 
 I then joined the workstation to the domain and logged in using:
 
 `FRANKLAB\it.user`
 
-I also verified that:
+I verified that:
 
-- `DC01` was the logon server
-- `WIN11-CLIENT01` appeared in Active Directory
-- The workstation was part of `franklab.test`
-- Group Policy information was being received from the domain
+- `DC01` was being used as the logon server
+- `WIN11-CLIENT01` appeared as a computer object in Active Directory
+- The workstation was joined to `franklab.test`
+- Group Policy information could be retrieved from the domain
 
-[View Lab 09](./labs/lab-09-domain-join-and-authentication.md)
+[View Lab 09](./01-Cybersecurity-Home-Lab/labs/lab-09-domain-join-and-authentication.md)
 
 ---
 
-# Current Active Directory Structure
+## Current Active Directory Structure
 
 ```text
 franklab.test
@@ -233,13 +203,18 @@ franklab.test
     ├── GG-HR
     └── GG-Sales
 ```
+
 ---
 
-### Next Lab
+## Next Lab
 
-- **Lab 10 — Group Policy Administration.**
+### Lab 10 — Group Policy Administration
 
-[View Cybersecurity Home Lab](./01-Cybersecurity-Home-Lab/)
+Next I’ll start using Group Policy to centrally manage security settings on `WIN11-CLIENT01` from `DC01`.
+
+---
+
+[View the Full Cybersecurity Home Lab](./01-Cybersecurity-Home-Lab/)
 
 ---
 
